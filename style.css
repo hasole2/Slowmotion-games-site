@@ -38,8 +38,8 @@ li {
 }
 
 a {
-  text-decoration: none; 
-    color: inherit; /* Наследует цвет текста от родительского элемента */
+    text-decoration: none; 
+    color: white !important;
     text-decoration: none; /* Убирает подчеркивание */
 }
 
