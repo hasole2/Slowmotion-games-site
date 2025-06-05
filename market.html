@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market - Slowmotion</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google API 
+    <script src="https://apis.google.com/js/api.js?onload=handleClientLoad"></script>
+    <meta name="google-signin-client_id" content="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.apps.googleusercontent.com">-->
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="./images/icons/slomotion_logo.png" alt="Логотип" class="header__logo">
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#projects">OUR PROJECTS</a></li>
+                    <li><a href="index.html#projects">OUR SERVICES</a></li>
+                    <li><a class="active" href="market.html">MARKET</a></li>
+                    <li><a href="career.html">CAREER</a></li>
+                    <div class="cart-icon-container">
+                        <img src="./images/icons/ph_basket-fill.svg" alt="Cart" id="cartButton">
+                        <span class="cart-count" style="background-color: #e74c3c;">0</span>
+                    </div>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#!" class="btn" id="accountButton">My Account</a>
+            </div>
+        </div>
+    </header>
+    
+
+<main class="market-main">
+    <div class="container">
+        <h1 class="market-title">3D MARKETPLACE</h1>
+        <!--
+        <div class="market-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="characters">Characters</button>
+            <button class="filter-btn" data-category="textures">Textures</button>
+        </div>
+        -->
+        <div class="market-grid" id="marketItems">
+        </div>
+    </div>
+</main>
+
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./images/icons/slomotion_logo.png" alt="Slowmotion Logo">
+                    <p>Making graphic since 2022</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="market.html">Market</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>slowmotion_graphics@mail.com</p>
+                    <p>+7 (911) 914-95-67</p>
+                    <div class="social-links">
+                        <a href="facebook.com">Facebook</a>
+                        <a href="https://www.youtube.com/">YouTube</a>
+                        <a href="instagram.com">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Slowmotion Graphics Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pop-ups -->
+    <div class="popup" id="cartPopup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Your Cart</h3>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total">
+                Total: $<span id="cartTotal">0.00</span>
+            </div>
+            <button class="btn checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <div class="popup" id="authPopup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div id="loginForm">
+                <h3>Login</h3>
+                <input type="email" id="loginEmail" placeholder="Email">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button class="btn" id="loginButton">Login</button>
+                <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </div>
+            <div id="registerForm" style="display:none;">
+                <h3>Register</h3>
+                <input type="text" id="registerName" placeholder="Name">
+                <input type="email" id="registerEmail" placeholder="Email">
+                <input type="password" id="registerPassword" placeholder="Password">
+                <button class="btn" id="registerButton">Register</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--<script src="./script.js"></script>-->
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Попап авторизации -->
+    <div class="popup" id="authPopup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        
+        <div id="loginForm">
+        <h3>Login</h3>
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button class="btn" id="loginButton">Login</button>
+        <p>No account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+        
+        <div id="registerForm" style="display:none;">
+        <h3>Register</h3>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button class="btn" id="registerButton">Register</button>
+        <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+</body>
+</html>

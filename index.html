@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slowmotion</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
+    
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">-->
+    <link rel="stylesheet" href="./style.css">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net;">
+    <script src="https://apis.google.com/js/api.js"></script> -->
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <img src="./images/icons/slomotion_logo.png" alt="Логотип" class="header__logo">
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li><a class="active" href="#home">HOME</a></li>
+                <li><a href="#projects">OUR PROJECTS</a></li>
+                <li><a href="#services">OUR SERVICES</a></li>
+                <li><a href="market.html">MARKET</a></li>
+                <li><a href="career.html">CAREER</a></li>
+                <div class="cart-icon-container">
+                    <img src="./images/icons/ph_basket-fill.svg" alt="Cart" id="cartButton">
+                    <span class="cart-count" style="background-color: #e74c3c;">0</span>
+                </div>
+            </ul> 
+        </nav>
+        <div class="header-actions">
+            <a href="#!" class="btn" id="accountButton">My Account</a>
+        </div>
+    </div>
+    </header>
+    
+    <main class="main">
+        <section class="welcome" id="home">
+            <div class="container">
+                <div class="welcome__text">
+                    <h4 class="welcome__subtitle">GRAPHIC STUDIO</h4>
+                    <h1 class="welcome__title">SLOWMOTION</h1>
+                    <p class="project__info">We create stunning visual experiences for games and films.</p>
+                    <a href="#projects" class="btn">OUR PROJECTS</a>   
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2 class="section-title">OUR GAMES</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Слайд 1 -->
+                        <div class="swiper-slide">
+                            <div class="game-item">
+                                <img src="./images/battlefield.png" alt="Game 1" class="game-img">
+                                <h3 class="game__title">Soldiers 2</h3>
+                            </div>
+                        </div>
+                        <!-- Слайд 2 -->
+                        <div class="swiper-slide">
+                            <div class="game-item">
+                                <img src="./images/callofduty.jpg" alt="Game 2" class="game-img">
+                                <h3 class="game__title">Night Motion</h3>
+                            </div>
+                        </div>
+                        <!-- Слайд 3 -->
+                        <div class="swiper-slide">
+                            <div class="game-item">
+                                <img src="./images/delta_force.jpg" alt="Game 3" class="game-img">
+                                <h3 class="game__title">Delta Force</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Кнопки навигации -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- Пагинация (точки) -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title">OUR SERVICES</h2>
+                <div class="services-grid">
+                    <a href="market.html" class="service-card">
+                        <h3>3D Modeling</h3>
+                        <p>High-quality 3D models</p>
+                    </a>
+                    <a href="market.html" class="service-card">
+                        <h3>Animation</h3>
+                        <p>Professional animations</p>
+                    </a>
+                    <a href="market.html" class="service-card">
+                        <h3>Visual Effects</h3>
+                        <p>Stunning VFX</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./images/icons/slomotion_logo.png" alt="Slowmotion Logo">
+                    <p>Making graphic since 2022</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="market.html">Market</a></li>
+                        <li><a href="career.html">Career</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>slowmotion_graphics@mail.com</p>
+                    <p>+7 (911) 914-95-67</p>
+                    <div class="social-links">
+                        <a href="facebook.com">Facebook</a>
+                        <a href="https://www.youtube.com/">YouTube</a>
+                        <a href="instagram.com">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Slowmotion Graphics Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Pop-ups -->
+    <div class="popup" id="cartPopup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h3>Your Cart</h3>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total">
+                Total: $<span id="cartTotal">0.00</span>
+            </div>
+            <button class="btn checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <div class="popup" id="authPopup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <div id="loginForm">
+                <h3>Login</h3>
+                <input type="email" id="loginEmail" placeholder="Email">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button class="btn" id="loginButton">Login</button>
+                <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+            </div>
+            <div id="registerForm" style="display:none;">
+                <h3>Register</h3>
+                <input type="text" id="registerName" placeholder="Name">
+                <input type="email" id="registerEmail" placeholder="Email">
+                <input type="password" id="registerPassword" placeholder="Password">
+                <button class="btn" id="registerButton">Register</button>
+                <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <!-- Попап авторизации -->
+    <div class="popup" id="authPopup">
+    <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        
+        <div id="loginForm">
+        <h3>Login</h3>
+        <input type="text" id="loginUsername" placeholder="Username" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button class="btn" id="loginButton">Login</button>
+        <p>No account? <a href="#" id="showRegister">Register</a></p>
+        </div>
+        
+        <div id="registerForm" style="display:none;">
+        <h3>Register</h3>
+        <input type="text" id="registerUsername" placeholder="Username" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button class="btn" id="registerButton">Register</button>
+        <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
