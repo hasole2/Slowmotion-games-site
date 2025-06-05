@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "3D Character Model",
+        "price": 49.99,
+        "image": "images/products/character.png" 
+    },
+    {
+        "id": 2,
+        "name": "Texture Pack",
+        "price": 29.99,
+        "image": "images/products/texture.png"
+    },
+    {
+    "id": 3,
+    "name": "VFX Bundle",
+    "price": 14.99,
+    "image": "images/products/vfx.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Soildier Animation Pack",
+        "price": 49.99,
+        "image": "images/products/animation.png" 
+    },
+    {
+        "id": 5,
+        "name": "City Enviroment Pack",
+        "price": 29.99,
+        "image": "images/products/city.jpg"
+    },
+    {
+    "id": 6,
+    "name": "Wood 3D Models Pack",
+    "price": 14.99,
+    "image": "images/products/wood.jpeg"
+    }
+]
